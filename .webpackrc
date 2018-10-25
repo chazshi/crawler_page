@@ -1,0 +1,28 @@
+{
+    "publicPath": "/",
+    "theme": "./src/theme.js",
+    "disableCSSModules": false,
+    "env": {
+        "development": {
+            "extraBabelPlugins": [
+                "dva-hmr"
+            ]
+        }
+    },
+    "proxy": {
+        "/infos": {
+            "target": "http://localhost:8000",
+            "changeOrigin": true
+        }
+    },
+    "extraBabelPlugins": [
+        [
+            "import", 
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": true
+            }
+        ]
+    ]
+}
