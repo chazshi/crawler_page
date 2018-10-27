@@ -11,6 +11,9 @@ export default {
         load: true,
         // citylist: []
         // payload: true
+
+        breadcrumb: ['主页', '招标信息', '今日信息'],
+        breadcrumbId: 1,
     },
   
     subscriptions: {
@@ -20,19 +23,29 @@ export default {
 
 
     effects: {
-      *fetch({ payload }, { call, put }) {  // eslint-disable-line
+      *fetch({ payload, dateparam }, { call, put }) {  // eslint-disable-line
         
-        // console.log('infos/fetch');
+        
         
         yield put({ type: 'loading', payload: true });
 
-        let getparam = {};
         // infoslist
+        // console.dir(dateparam)
+
+
+        if(dateparam) {
+            
+            // (`/infos?datelimit=${dateparam}&_limit=${PAGE_SIZE}`);
+        } else {
+        }
+
+        // getparam = this.state.breadcrumbId;
+
         
 
-        const infosresponse = yield call(infosService.getinfos, getparam);
+        const infosresponse = yield call(infosService.getinfos, dateparam);
 
-        const citysresponse = yield call(infosService.getcitys, getparam);
+        const citysresponse = yield call(infosService.getcitys);
         // console.log(response)
 
         if(infosresponse && citysresponse){
@@ -74,8 +87,18 @@ export default {
               ...state,
               load: payload
           }
+      },
+
+      breadcrumb(state, {payload}) {
+        return {
+            ...state,
+            ...payload
+        }
       }
+
+
     },
+
   
   };
   

@@ -5,6 +5,8 @@ import createLoading from 'dva-loading';
 
 import createHistory from 'history/createBrowserHistory';
 
+// import "babel-polyfill";
+window.Promise = Promise    // 解决360浏览器Promise未定义的问题
 // import dynamic from 'dva/dynamic';
 
 // 1. Initialize

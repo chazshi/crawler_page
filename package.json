@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "set PORT=8090 && roadhog server",
+    "start": "set PORT=3000 && roadhog server",
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
     "precommit": "npm run lint"
@@ -9,6 +9,7 @@
   "dependencies": {
     "antd": "^3.10.0",
     "babel-plugin-import": "^1.9.1",
+    "babel-polyfill": "^6.26.0",
     "dva": "^2.4.0",
     "dva-loading": "^2.0.5",
     "keymaster": "^1.6.2",
