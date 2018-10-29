@@ -10,7 +10,7 @@
         }
     },
     "proxy": {
-        "/infos": {
+        "/infosx": {
             "target": "http://localhost:8000",
             "changeOrigin": true
         }

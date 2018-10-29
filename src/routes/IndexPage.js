@@ -20,16 +20,18 @@ const { Header, Content, Sider } = Layout;
 
 
 //TODO: 
-// 1. sorter检查，重新设计好
-// 2. 搜索功能
+
+// 1. 搜索功能修改，删除不需要的行
+// 3. 前端生成包太大，压缩。
+
+
+// 1. Table点击sorter之后显示的问题
+// 2. sorter检查，重新设计好
 // 3. sorter两段而不是三段
-// 4. Table点击sorter之后显示的问题
-// 5. 选中所有地区后筛选出现问题
-
-
 
 
 // 1. 数据库重复问题，以title为准消除重复！！！   设置title为unique键，已解决
+// 2. 选中所有地区后筛选出现问题    已解决，filter函数写错了
 
 
 
